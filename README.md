@@ -1,6 +1,6 @@
 # LangGraph Tool-Calling Agent
 
-An agentic AI assistant built with LangGraph that routes questions to tools (calculator, web search) or answers directly — powered by Gemini 2.5 Flash.
+A production-style AI agent built with LangGraph and TypeScript — autonomously routes questions through tools (calculator, web search) or answers directly using Gemini 2.5 Flash. Demonstrates StateGraph, conditional edges, ToolNode, and full LangSmith observability.
 
 ## Overview
 
@@ -26,6 +26,8 @@ flowchart TD
 ```
 
 The graph compiles into a single runnable instance. The agent node calls Gemini with bound tools; if the response contains tool calls, the conditional edge routes to the tools node, which executes them and loops back to the agent. Otherwise it reaches `END`.
+
+![LangGraph Graph](LangGraph.png)
 
 ## Tech Stack
 
