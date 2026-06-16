@@ -5,7 +5,7 @@ async function main() {
   try {
     const result = await graph.invoke({
       messages: [
-        new HumanMessage("What is node.js?")
+        new HumanMessage("Who won the latest IPL final?")
       ],
     });
 
