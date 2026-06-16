@@ -1,4 +1,3 @@
-import express from "express";
 import { HumanMessage } from "@langchain/core/messages";
 import { model } from "./config/model.js";
 
