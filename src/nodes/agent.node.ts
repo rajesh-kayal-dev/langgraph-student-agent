@@ -1,9 +1,7 @@
 import { model } from "../config/model.js";
-import { calculatorTool } from "../tools/calculator.tool.js";
+import { tools } from "../tools/index.js";
 
-const modelWithTools = model.bindTools([
-  calculatorTool,
-]);
+const modelWithTools = model.bindTools(tools);
 
 export async function agentNode(state: any) {
   const response = await modelWithTools.invoke([
